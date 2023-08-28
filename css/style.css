@@ -1,0 +1,1364 @@
+/*  Reset Css */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+*{box-sizing: border-box;}
+p{margin: 0px; padding: 0px}
+a:hover{text-decoration: none;}
+li{list-style: none;}
+
+/*  Fim Reset Css */
+
+/* Barra de rolagem */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #D5D5D5 #FFFFFF
+}
+
+*::-webkit-scrollbar {
+    width: 12px
+}
+
+*::-webkit-scrollbar-track {
+    background: #FFFFFF
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #D5D5D5;
+    border-radius: 1rem;
+    border: 4px #FFFFFF solid
+}
+
+/* fim varra de Rolagem */
+
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins-Regular.ttf);
+  }
+html{
+    scroll-behavior: smooth;
+    font-family: Poppins;
+    scroll-behavior: smooth;
+    background: #175ea8;
+    background: #1d5da2;
+    background: #00a1e4;
+    background: #eeeeee;
+    background: #eb6852;
+    background: #bde386;
+    background: #effbff;
+    background: #ffe7b2;
+    background: #feeed2;
+    background: whitesmoke;
+    background: #371669;
+    background: #4e2096;
+    background: #f3eee8;
+    background: #74cb90;
+    background: #cce9fd;
+    background: #229dc3;
+    background: white;
+    background: #e7f0f7;
+    
+}
+/* Header */
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #00a1e4;
+    background-image: -webkit-linear-gradient(315deg, #00A1DE, #2477cd);
+    padding: 10px 15px;
+    position: fixed;
+    top: 0px; 
+    z-index: 10000;
+}
+
+header #logo{
+    display: block;
+    width: 140px;
+    height: 49px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+header #logo:hover{
+    opacity: 0.9;
+}
+
+header .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header #menu{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+header #menu ul {
+     display: flex; 
+}
+
+header nav #menu li{
+    margin-left: 10px;
+}
+header nav #menu li#login{ 
+    margin-left: 30px;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    transition: all 0.3s ease 0s;
+}
+header a:hover{
+    color: #1d5da2;
+}
+#botao-menu{
+    display: none;
+    font-weight: 900;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+#botao-menu:hover{
+    color: #1d5da2;
+}
+
+header a{
+    text-decoration: none;
+}
+
+header #menu-mobile{
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateX(100rem);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 60%;
+    height: 100%;
+    background: #cce9fd;
+    background: #1d5da2;
+    text-align: center;
+    z-index: 10001;
+}
+header #menu-mobile a{
+    display: block;
+    padding: 20px 0px; 
+    font-size: 22px;
+}
+header #menu-mobile i{
+    margin: 20px 20px 20px 20px;
+    text-align: right;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+}
+header #menu-mobile ul li:first-child{
+    text-align: right;
+}
+header #menu-mobile i:hover{
+    color: #cce9fd;
+}
+
+header #menu-mobile a:hover{
+    background: #cce9fd;
+}
+header nav #menu li#btn-login{
+    margin-left: 25px;
+}
+#btn-login a{
+    background-color: #175ea8; 
+    padding: 7px 15px;
+}
+#btn-login a:hover{
+    color:white;
+    opacity: 0.;
+    background-color: #1d3c5e;
+}
+#login{
+    display: none;
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 100002 !important;
+    opacity:1;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+#login:target {
+    opacity:1;
+    pointer-events: auto;
+}
+#login form{
+    position: absolute;
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: #175ea8;
+    color: white;
+    padding: 25px;
+    z-index: 100000000 !important;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+#btn-close-login{
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#btn-close-login:hover{
+    color: #11345a;
+}
+#login form h1{
+    margin-bottom: 15px;
+    text-align: center;
+}
+#login form label{
+    margin-bottom: 5px;
+}
+#login form input{
+    text-indent: 10px;
+    width: 230px;
+    height: 30px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    outline-style: none;
+}
+#login form input::placeholder{
+    color: lightgray;
+    text-indent: 10px;
+}
+#login form p{   
+    text-align: center;
+}
+#login form p a{   
+    font-size: 16px;
+    color: #11345a;
+    font-weight: bold;
+}
+#login form p a:hover{   
+    color: white;
+}
+#login form button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    color: white;
+    background: #00a1e4;
+    border: none;
+    cursor: pointer;
+}
+#login form button:hover{
+    margin-bottom: 10px;
+    height: 30px;
+    color: white;
+    background: #11345a;
+    border: none;
+}
+
+/* Inicio Main*/
+main{
+    padding-top: 69px;
+}
+.titulo{ 
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 800;
+    color: #175ea8;
+    margin-bottom: 50px;
+    text-align: center; 
+}
+/* Inicio Espécies*/
+#especies{
+    background: white;
+    height: 115px;
+    padding-top: 8px;
+    padding-bottom: 13px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    max-width: 1280px;
+    margin: 15px auto;
+    border-radius: 23px;
+    border: 1px solid rgb(237, 237, 237);
+}
+#especies::-webkit-scrollbar{
+    display: none;
+    scrollbar-width: none;
+}
+#especies a:hover{
+    opacity: 0.7;
+}
+#especies ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#especies ul li{
+    display: inline-block;
+    text-align: center;
+    
+}
+#especies ul li img{
+    display: block;
+}
+#especies ul li a{
+   text-decoration: none;
+   color: #175ea8;
+   font-weight: 500;
+}
+
+/* Início Vitrine*/
+.carousel-caption{
+    color: #1d5da4;
+    font-weight: bolder;
+    text-shadow: 0.1em 0.1em 0.7em black;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-image: none;
+}
+.carousel-control-prev i, .carousel-control-next i{
+    color: #1d5da2;
+    font-size: 30px;
+}
+.carousel-item a > img {
+     width: 100%;    
+     /* height: 310px;   */
+}
+.carousel-indicators li{
+    background-color: #9ae1ff;
+}
+
+#carouselExampleIndicators .active{
+    background-color: #175ea8de;
+}
+  
+
+/* Texto */
+.cont{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Início Cards */
+#cards{
+    width: 100%;
+    padding: 50px 0px;
+    text-align: center;
+    background: #e7f0f7;
+    background: url(../img/pet3.png) ;
+    background-size: contain;
+
+}
+#cards h1{
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 800;
+    color: #175ea8;
+    margin-bottom: 50px;
+}
+#cont-cards{
+    display: flex;
+    margin-top: 1.6rem;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+.item-card{
+    margin-bottom: 20px;
+}
+#cards img:hover{
+    transition: 0.9s;
+    transform: scale(1.1,1.1);
+    opacity: 0.8;
+}
+
+/* Artigos */
+
+#cont-artigos{
+    background: #cde9fe url(../img/pet.png);
+    background-size: cover;
+    padding-bottom: 190px;
+}
+#artigos #top-artigos{
+    display: block;
+    height: 82px;
+    background-image: url(../img/bg-topo-azul.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#artigos #bot-artigos{
+    display: block;
+    height: 69px;
+    background-image: url(../img/bg-bottom-azul.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#artigos h1 {
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 800;
+    color: #175ea8;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* Artigos link*/
+#link-artigo{
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+} 
+#link-artigo article{
+    max-width: 269px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgb(237, 237, 237);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 2px 8px 0px;  
+    margin: 0px 15px;
+
+}
+#link-artigo article:hover{
+    transform: scale(1.1,1.1);
+    transition: 1s;
+}
+#link-artigo article:hover img{
+    filter: grayscale(65%);
+}
+#link-artigo .textos-artigo{
+    padding: 15px;
+}
+#link-artigo article img{
+    margin-bottom: 15px;
+    width: 100%;
+}
+#link-artigo article h2{
+    margin-bottom: 10px;
+    color: #175ea8;
+}
+#link-artigo article a{
+    text-align: center;
+    /* max-width: 190px; */
+    margin: 0 auto;
+    margin-top: 50px;   
+    padding: 10px;
+    display: block;
+    color: white;
+    background-image: -webkit-linear-gradient(315deg, #00a1e4, #33c2ff);
+    border-radius: 35px;
+}
+
+#link-artigo article a:hover{
+    transition: 3s;
+    background-image: -webkit-linear-gradient(315deg, #175ea8, #175ea8);
+    
+}
+
+/* Fidelidade */
+#fidelidade{
+    padding: 50px 0px 230px;
+    background: url(../img/pet2.png) 0% 0% / cover;
+
+}
+#fidelidade  h1 {
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 800;
+    color: #175ea8;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#cartoes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.cartao-item{
+    width: 250px;
+    height: 300px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color:#00a1e4;
+    background-image: -webkit-linear-gradient(315deg, #00a1e4, #33c2ff);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px #00000094;
+}
+
+.cartao-item h2{
+    margin-bottom: 20px;
+}
+.cartao-item i{
+    font-size: 35px;
+    color: #175ea8;
+}
+.cartao-item img{
+    margin-bottom: 15px;
+}
+.cartao-item:hover{
+    transition: 0.8s;
+    transform: scale(1.1,1.1);
+    filter: grayscale(25%); 
+    /* opacity: 0.9; */
+}
+
+
+/* Parallax */
+#parallax{
+    height: 100vh;
+    background: url(../img/variosCachorros.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 100vw rgba(41, 41, 41, 0.75);
+    padding: 0px 20px;
+}
+#parallax h2{
+    color: white;
+    font-family: 'Niconne';
+    font-size: 6rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*Quem somos*/
+#QuemSomos{
+    padding: 50px 20px 100px;
+    background: url(../img/pet2.png) 0% 0% / cover;
+}
+#QuemSomos h1 {
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 800;
+    color: #175ea8;
+    margin-bottom: 50px;
+}
+#QuemSomos p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+/* Banner comprido */
+#banner-comprido img{
+    width: 100%;
+}
+#banner-comprido img:hover{
+    filter: grayscale(75%); 
+}
+/* Seta*/
+#seta{
+    display: none; 
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+}
+
+#seta a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #11345a;
+    color: white;
+    font-size: 27px;
+    border-radius: 26px;
+    text-decoration: none;
+}
+#seta a:hover{
+    filter: brightness(90%);
+}
+
+/* Fazer seta ficar mudando de cor */
+#seta a {
+    animation-name: seta;
+    animation-timing-function: linear;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes seta {
+    0%   {background-color: #11345a;}
+    25%  {background-color: #11345a;}
+    50%  {background-color: gray;}
+    75%  {background-color: grau;}
+    100% {background-color: #11345a;}
+  }
+
+  /* Fazer seta crescer e diminuir*/
+#seta{
+    transition: 1s;
+}
+#seta:hover{
+    transform: scale(1.1,1.1);
+}
+
+/* Histórias*/
+
+#historias{
+    padding: 50px 20px;
+    background: url(../img/pet3.png);
+    background-size: contain;
+}
+#historias article{
+    margin-bottom: 50px;
+}
+#historias h1 {
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 800;
+    color: #175ea8;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#historias #cont-historias{
+    background: white;
+    padding: 20px;
+    display: flex;
+}
+#img-historia{
+    margin-right: 20px;
+}
+#img-historia img{
+    max-width: 350px;
+}
+#img-historia img:hover{
+    filter: grayscale(75%);
+}
+#historia-conteudo{
+    display: flex;
+    flex-direction: column;
+}
+#historia-conteudo h2{
+    color: #175ea8;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#historia-conteudo p{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+#historia-conteudo a{
+    text-align: center;
+    width: 150px;
+    margin-top: 20px;
+    padding: 14px;
+    display: block;
+    color: white;
+    background-image: -webkit-linear-gradient(315deg, #00a1e4, #33c2ff);
+    border-radius: 35px;
+}
+#historia-conteudo a:hover{
+    background-image: -webkit-linear-gradient(315deg, #175ea8, #175ea8);
+}
+
+#comentarios-artigo{
+    background: white;
+    padding: 20px 20px 20px 20px;
+    border-top: 1px solid lightgray;
+}
+#comentarios-artigo h2{
+    background: whitesmoke;
+    padding: 30px;
+    border: 1px solid lightgray;
+    color: #175ea8;
+    font-weight: bold;
+    font-size: 20px;
+}
+#comentarios-artigo h2 i{
+    float: right;
+}
+#comentarios-artigo h3{
+    color: #175ea8;
+    font-weight: bold;
+    font-size: 20px;
+}
+#coment-text{
+    padding-left: 10px;
+}
+.active{
+    display:block!important;
+}
+#autor{
+    display: none; 
+    border-left: 1px solid lightgray;
+    padding: 20px;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+#autor .info-autor{
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+}
+#deixar-comentario{
+    display: flex;
+    flex-direction: column;
+}
+#deixar-comentario label{
+    color: #175ea8;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+#deixar-comentario #nome{
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-indent: 20px;
+    padding: 5px;
+    border: 1px solid lightgray;
+}
+#deixar-comentario textarea{
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-indent: 20px;
+    padding-top: 10px;
+    border: 1px solid lightgray;
+}
+#deixar-comentario textarea::placeholder, #nome::placeholder {
+    color: lightgray;
+  }
+
+#cont-btn-enviar {
+    display: block;
+}
+
+#cont-btn-enviar button{
+    width: 150px;
+    padding: 14px;
+    border: 0px;
+    color: white;
+    background: #00A1DE;
+    border-radius: 35px;
+    float: right;
+}
+#deixar-comentario button:focus{
+    outline-style: none;
+  }
+
+#deixar-comentario button:hover{
+    background-image: -webkit-linear-gradient(315deg, #175ea8, #175ea8);
+    cursor: pointer;
+}
+
+/* Início footer */
+
+footer{
+    background: #175ea8;
+    background: #00a1e4;
+    background-image: -webkit-linear-gradient(315deg, #00A1DE, #2477cd);
+    text-align: center;
+    padding: 25px 20px;
+    color: white;
+}
+#menu-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#logo-footer img{
+    margin-bottom: 10px;
+}
+#logo-footer p{
+    font-family: 'Niconne';
+    font-size: 26px;
+}
+#logo-footer a:hover{
+    opacity: 0.8;
+}
+#links-footer{
+    text-align: left;
+}
+#links-footer h2{
+    margin-bottom: 15px;   
+    font-size: 18px;
+}
+#links-footer ul li{
+    margin-bottom: 11.8px;   
+}
+#links-footer ul li a{
+    color: white;  
+    font-style: 200; 
+}
+#links-footer ul li a:hover{
+    color: #1d5da2;  
+}
+#localizacao{
+    text-align: left;
+}
+#localizacao h2{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+#localizacao p{
+    margin-bottom: 10px;
+    font-weight: 200;
+    line-height: 20px;
+}
+#localizacao p span{
+    font-size: 12px;
+} 
+#localizacao iframe{
+    margin-bottom: 10px;
+}
+#img-footer img:hover{
+    transition: 0.9s;
+    transform: scale(1.1,1.1);
+}
+#linha{
+    margin-bottom: 30px;
+}
+#linha hr{
+    border-color: white;
+}
+#redes-footer{
+    display: flex;
+    justify-content: space-around;
+}
+#redes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#redes li{
+    display: inline-block;
+    margin-right: 15px;
+}
+#redes a{
+    color: white;
+}
+#redes a:hover{
+    color: #1d5da2;
+}
+/* Fazer Redes girar*/
+#redes a i{
+    transition: width 1s, height 1s, transform 1s;
+}
+#redes a:hover i{
+    transform: rotate(360deg);
+}
+
+/* Fim Home */
+
+/* Inicio Página de Cadastro */
+#areaCadastro{
+    padding: 50px 0px;
+    height: 100vh;
+    background: url(../img/cachorro-gato.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 100vw rgba(41, 41, 41, 0.75);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#cadastro-cliente{
+        width: 30%;
+        /* background: #175ea8; */
+        /* background-image: -webkit-linear-gradient(315deg, #175ea8, #0d4077); */
+        background: #175ea833;
+        margin: 0 auto;
+        padding: 25px;
+        color: white;
+        border-radius: 10px;
+        
+}
+#cadastro-cliente form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#cadastro-cliente form h1{
+    /* color: #11345a; */
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+#cadastro-cliente form label{
+    margin-bottom: 10px;
+}
+#cadastro-cliente form input{
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    text-indent: 10px;
+    height: 30px;
+}
+#cadastro-cliente form input::placeholder{
+    color: lightgray;
+    text-indent: 10px;
+}
+
+#cadastro-cliente form button{
+    height: 30px;
+    color: white;
+    background: #00a1e4;
+    border: none;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+
+#cadastro-cliente form button:hover{
+    background: #11345a;
+
+}
+
+/* Fim Página de Cadastro */
+
+
+/* Inicio Página Banho e tosa */
+#banho-tosa{
+    padding: 50px 0px;
+    background: #e7f0f7;
+    background: url(../img/pet3.png);
+    background-size: contain;
+}
+#banho-tosa h1{
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 800;
+    color: #175ea8;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#conteudo-banho{
+    padding: 20px;
+}
+#conteudo-banho img{
+    max-width: 450px;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 90px;
+}
+#conteudo-banho p{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+#conteudo-banho li{
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    font-weight: bold;
+    list-style: initial;
+}
+
+#btn-zap a{
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    max-width: 170px;
+    margin-top: 30px;
+}
+#btn-zap a:hover{
+    background: rgb(1, 82, 1);
+}
+#btn-zap a i{
+    margin-left: 5px;
+    font-size: 20px;
+    
+}
+/* Fim do banho e tosa */
+
+/* início Pet hostel */
+#pet-hostel{
+    padding: 50px 0px;
+    min-height: 100vh;
+    padding: 50px 0px;
+    background: #e7f0f7 url(../img/pet.png);
+    background-size: cover;
+    /* box-shadow: inset 0 0 0 100vw rgba(41, 41, 41, 0.75); */
+    
+}
+
+#cont-pet-hostel img {
+    max-width: 450px;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 90px;
+}
+#cont-pet-hostel{
+    padding: 20px;
+}
+#cont-pet-hostel p{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+#cont-pet-hostel h2{
+    color: #11345a;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/*Fim Pet Hostel*/
+
+/* Inicio nutricionista */
+#nutricionista{
+    padding: 50px 0px;
+    background: #e7f0f7 url(../img/pet2.png);
+    background-size: cover;
+}
+#conteudo-nutricionista{
+    padding: 20px;
+}
+#conteudo-nutricionista p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+#nutricionista img{
+    max-width: 450px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 90px;
+}
+
+/* Fim do nutricionista */
+
+/* Inicío Consulta médica */
+#consulta-medica{
+    padding: 50px 0px;
+    background: #e7f0f7;
+    background: url(../img/pet3.png);
+    background-size: contain;
+}
+#cont-consulta{
+    padding: 0px 20px;
+}
+#cont-consulta form{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+#cont-consulta form label{
+    margin-bottom: 5px;
+    color:#175ea8;
+}
+#cont-consulta form input,select{
+    border-radius: 5px;
+    outline-style: none;
+}
+
+#cont-consulta form textarea{
+    margin-bottom: 10px;
+}
+#cont-consulta form button{
+    border: none;
+    color: white;
+    background: #00a1e4;
+    padding: 7px 0px;
+}
+#cont-consulta form button:hover{
+    background: #175ea8;
+}
+.campos{
+    border: 1px solid lightgray;
+    padding: 5px;
+}
+
+/* Fim consulta */
+
+/* Início Animais */
+
+#animais h1{
+    color: #175ea8;
+    font-family: 'Niconne';
+    font-size: 90px;
+    text-align: center;
+    font-weight: bold;
+}
+#animais p{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+#conteudo-gato,#conteudo-cachorro,#conteudo-ave,#conteudo-peixe,#conteudo-roedor,#conteudo-reptil{
+    padding: 50px 20px;
+}
+
+#parallax-gato{
+    height: 100vh;
+    background: url(../img/animais-gato.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 100vw rgba(41, 41, 41, 0.75);
+    padding: 0px 20px;    
+}
+#parallax-cachorro{
+    height: 100vh;
+    background: url(../img/animais-cachorro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 100vw rgba(41, 41, 41, 0.75);
+    padding: 0px 20px;    
+}
+#parallax-ave{
+    height: 100vh;
+    background: url(../img/animais-ave.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 100vw rgba(41, 41, 41, 0.75);
+    padding: 0px 20px;    
+}
+#parallax-peixe{
+    height: 100vh;
+    background: url(../img/animais-peixe.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 100vw rgba(41, 41, 41, 0.75);
+    padding: 0px 20px;    
+}
+#parallax-roedor{
+    height: 100vh;
+    background: url(../img/animais-roedor.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 100vw rgba(41, 41, 41, 0.75);
+    padding: 0px 20px;    
+}
+#parallax-reptil{
+    height: 100vh;
+    background: url(../img/animais-reptil.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 100vw rgba(41, 41, 41, 0.75);
+    padding: 0px 20px;    
+}
+
+
+/* Responsividade */
+@media (max-width: 450px){
+    .carousel-item a > img {   
+        height: 180px;  
+    }
+    #cont-cards {
+        justify-content: center;
+    }
+    #especies ul {
+        justify-content: space-between;
+    }
+    #especies ul li {
+        margin-left: 10px;
+    }
+    #link-artigo article {
+        display: block;
+        margin: 0px auto 20px;
+    }
+    #parallax {
+         background-attachment: inherit;
+    }
+    #parallax h2{
+        font-size: 70px;
+   }
+
+    #link-artigo {
+        display: block;
+    }
+
+    #menu-footer {
+        flex-direction: column;
+    }
+    #logo-footer, #links-footer, #localizacao{
+        margin-bottom: 30px;
+    }
+    #links-footer, #localizacao{
+        text-align: center;
+    }
+    #img-footer{
+        margin-bottom: 20px;
+    }
+    #redes {
+        margin-bottom: 15px;
+    }
+    #redes-footer {
+        flex-direction: column-reverse;
+    }
+    #redes-footer p{
+        line-height: 20px;
+    }
+    #conteudo-banho img{
+        width: 100%;
+        float: none;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    #conteudo-nutricionista img{
+        width: 100%;
+        float: none;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    #cont-pet-hostel img{
+        width: 100%;
+        float: none;
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+
+
+
+}
+@media (max-width: 690px){
+    #menu-footer {
+        flex-direction: column;
+    }
+    #logo-footer, #links-footer, #localizacao{
+        margin-bottom: 30px;
+    }
+    #links-footer, #localizacao{
+        text-align: center;
+    }
+    #img-footer{
+        margin-bottom: 20px;
+    }
+    #redes {
+        margin-bottom: 15px;
+    }
+    #redes-footer {
+        flex-direction: column-reverse;
+    }
+    #redes-footer p{
+        line-height: 20px;
+    }
+    #img-historia{
+        margin-right: 0px;
+    }
+    #img-historia img{
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    #historias #cont-historias {
+        background: white;
+        flex-direction: column;
+    }
+    #conteudo-banho img{
+        width: 100%;
+        float: none;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+
+}
+@media (max-width: 765px){
+    header #menu{
+        display: none;
+    }
+    #botao-menu{
+        display: block;
+    }
+}
+@media (max-width: 780px){
+    #cartoes{
+        flex-direction: column; 
+        justify-content: space-around;
+    }
+    .cartao-item {
+        margin-bottom: 20px;
+    }
+    #cadastro-cliente {
+        width: 85%;
+    }
+}
+@media (max-width: 945px){
+    #cont-cards {
+
+        justify-content: space-around;
+
+    }
+
+}
+
+
+/* imagens grátis https://www.pngwing.com/ */
